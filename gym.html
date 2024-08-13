@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GymGuide: Workout Plan Generator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Welcome Screen -->
+    <div id="welcomeScreen" class="welcome-screen">
+        <h1 class="welcome-text">GymGuide: Workout Plan Generator</h1>
+        <p class="credit-text">By Abdul Shazif Nawaz</p>
+    </div>
+
+    <!-- Main Content -->
+    <div id="mainContent" class="hidden">
+        <div class="container">
+            <h1>GymGuide: Workout Plan Generator</h1>
+            <form id="workoutForm">
+                <label for="gender">Gender:</label>
+                <select id="gender" required>
+                    <option value="">Select...</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+
+                <label for="age">Age (17+):</label>
+                <input type="number" id="age" min="17" required>
+                <div id="ageError" class="error-message"></div>
+
+                <label for="heightUnit">Height Unit:</label>
+                <select id="heightUnit" required>
+                    <option value="cm">Centimeters</option>
+                    <option value="ft-in">Feet and Inches</option>
+                </select>
+
+                <div id="heightCmDiv">
+                    <label for="height">Height (cm):</label>
+                    <input type="number" id="height">
+                    <div id="heightError" class="error-message"></div>
+                </div>
+
+                <div id="heightFtInDiv" class="hidden">
+                    <label for="feet">Feet:</label>
+                    <input type="number" id="feet">
+                    <label for="inches">Inches:</label>
+                    <input type="number" id="inches">
+                    <div id="heightFtInError" class="error-message"></div>
+                </div>
+
+                <label for="experience">Years of Experience:</label>
+                <select id="experience" required>
+                    <option value="">Select...</option>
+                    <option value="0">0 years (Just getting started.)</option>
+                    <option value="6-12">6 months - 1 year (Know the basics and am still improving my workouts and techniques.)</option>
+                    <option value="1-2">1 - 2 years (Have a solid grasp of workouts and techniques and am focusing on advancing my fitness goals.)</option>
+                    <option value="2+">2+ years (Have a good grasp of workouts and techniques and am focused on improving my fitness and pushing my limits.)</option>
+                </select>
+
+                <label for="goals">Fitness Goals:</label>
+                <select id="goals" required>
+                    <option value="">Select...</option>
+                    <option value="gain muscle">Gain Muscle</option>
+                    <option value="look shredded">Look Shredded</option>
+                    <option value="lose weight">Lose Weight</option>
+                </select>
+
+                <label for="frequency">Workout Frequency:</label>
+                <select id="frequency" required>
+                    <option value="">Select...</option>
+                    <option value="3">3 times a week</option>
+                    <option value="4">4 times a week</option>
+                    <option value="5">5 times a week</option>
+                </select>
+
+                <button type="submit">Generate Plan</button>
+            </form>
+
+            <!-- Control Buttons -->
+            <div id="controlButtons" class="hidden">
+                <button id="stopButton">Stop</button>
+                <button id="resumeButton" class="hidden">Resume</button>
+                <button id="clearButton">Clear Workout</button>
+            </div>
+
+            <!-- Workout Plan Display -->
+            <div id="workoutPlan" class="hidden">
+                <h2>Your Workout Plan:</h2>
+                <div id="planDetails"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
