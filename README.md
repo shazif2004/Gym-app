@@ -1,2 +1,2 @@
 # GymGuide
- 
+ The GymGuide: Workout Plan Generator is an AI-powered website designed to help users create personalized workout plans based on their individual needs and goals. By entering details such as gender, age, height, years of experience, and fitness objectives, the AI-driven system analyzes the input and generates a tailored workout plan. The site offers a user-friendly experience with features like workout duration, exercise details, and a visually appealing design that captures the essence of a gym environment. This project demonstrates the practical use of AI in simplifying and personalizing fitness planning, making it accessible to users of all experience levels.
